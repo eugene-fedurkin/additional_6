@@ -1,5 +1,4 @@
 module.exports = function zeros(expression) {
-
   let result = '1';
   let factorials = expression.split('*');
   for (let i = 0; i < factorials.length; i++) {
@@ -9,12 +8,9 @@ module.exports = function zeros(expression) {
     result = multiply(factorials[i], result);
   }
   return result.length - result.match(/0{0,}$/).index;
-
 }
 
-
-
-module.exports = function zerosRecursive(expression) {
+function zerosRecursive(expression) {
   let result = '1';
   let factorials = expression.split('*');
 
